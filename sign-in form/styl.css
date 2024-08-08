@@ -13,14 +13,14 @@ font-family: Georgia, 'Times New Roman', Times, serif;
     transform: translate(-50%, -50%);
     margin-top: 200px;
     margin-left: 100px;
-background-color: #ffffff;
-width: 25rem;
-padding: 2.5rem;
-box-sizing: border-box;
-border: 1px solid rgb(255, 255, 255);
-border-radius: 10px;
-height: 500px ;
-box-shadow: 20px 20px 60px #0a0a0a18, inset -20px -20px 60px rgba(151, 139, 139, 0.185);;
+    background-color: #ffffff;
+    width: 25rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 500px ;
+    box-shadow: 20px 20px 60px #0a0a0a18, inset -20px -20px 60px rgba(151, 139, 139, 0.185);;
 }
 .google-logo{
     display: flex;
@@ -52,12 +52,12 @@ box-shadow: 20px 20px 60px #0a0a0a18, inset -20px -20px 60px rgba(151, 139, 139,
 .container .inpuntbox{
     position: relative;
 } 
-.container .inpuntbox input[type="Email"]{
+input[type="Email"]{
     display: block;
     border: 1px solid #0554ff;
     font-size: 16px;
     width: 100%;
-    height: 30px;
+    height: 55px;
     padding: 0 15px;
     margin-bottom: 10px;
     position: relative;
@@ -65,18 +65,34 @@ box-shadow: 20px 20px 60px #0a0a0a18, inset -20px -20px 60px rgba(151, 139, 139,
     background-color: transparent;
     outline: none;
     border-radius: 5px;
-    position: relative;
 }
-.container .inpuntbox input[type="Email"]:target ~ .input-label {
+.inpuntbox{
+  position: relative;
+}
+input[type="email"]:focus ~ .input-label {
+  top: -7px;
+  color: #0554ff;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+}
+input[type="Email"]:target ~ .input-label {
     top: -7px;
     color: #0554ff;
     font-size: 13px;
     background-color: rgb(255, 255, 255);
     z-index: 2;
   }
-.container .inpuntbox label{
-  color: #0554ff;
-  font-size: 12px;
+.input-label{
+  position: absolute;
+  top: 15px;
+  font-size: 1.1rem;
+  left: 14px;
+  color: rgb(122, 122, 122);
+  font-weight: 100;
+  transition: 0.1s ease;
+  background-color: white;
+  padding: 0 5px;
 }
 .container .inpuntbox:hover{
     border: #0554ff;
